@@ -1,0 +1,18 @@
+:root{
+    --light-grey: rgb(216, 216, 216);
+    --blue:#558DCF
+}
+    /* NAVBAR */
+.navbar{
+    background-color: var(--light-grey);
+}
+.navbar li:hover{
+    text-decoration: underline 4px var(--blue);
+}
+.nav-button button{
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    
+}
