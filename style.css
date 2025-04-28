@@ -1,18 +1,23 @@
-:root{
-    --light-grey: rgb(216, 216, 216);
-    --blue:#558DCF
+:root {
+  --light-grey: #d4d5da;
+  --main-theme: #337cc1;
+  --backup-theme: #756bad;
 }
-    /* NAVBAR */
-.navbar{
-    background-color: var(--light-grey);
+/* NAVBAR */
+.navbar {
+  background-color: var(--light-grey);
 }
-.navbar li:hover{
-    text-decoration: underline 4px var(--blue);
+.navbar li:hover {
+  text-decoration: underline 4px var(--main-theme);
+  animation: heartBeat 1s;
 }
-.nav-button button{
-    background-color: var(--blue);
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    
+.nav-button button {
+  background-color: var(--main-theme);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+.nav-button button:hover {
+  background-color: var(--backup-theme);
+  color: white;
 }
