@@ -70,7 +70,7 @@ const About = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <span className="text-blue-600 font-bold tracking-widest uppercase text-sm">
+          <span className="text-blue-600 font-bold tracking-widest uppercase text-sm space-x-2 bg-blue-600/10 backdrop-blur-md px-5 py-2 rounded-full border border-blue-400/30">
             Empowering Through Faith
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-3 mb-6">

@@ -127,19 +127,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Links */}
-        <div className="flex justify-center space-x-4 mb-12">
-          {socialLinks.map((social, index) => (
-            <a
-              key={index}
-              href={social.href}
-              className={`w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center ${social.color} hover:scale-110 transform transition-all duration-300`}
-            >
-              <social.icon className="w-5 h-5" />
-            </a>
-          ))}
-        </div>
-
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -147,6 +134,20 @@ const Footer = () => {
               © {currentYear} Quran Sabaq. All rights reserved. Made with ♥ for
               the Ummah.
             </p>
+
+            {/* Social Links */}
+            <div className="flex justify-center space-x-4 ">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className={`w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center ${social.color} hover:scale-110 transform transition-all duration-300`}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+
             <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
               <a
                 href="#"

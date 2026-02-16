@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Testimonials from "./components/Testimonals";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <About />
       <Testimonials />
+      <Contact />
       <Footer />
     </>
   );

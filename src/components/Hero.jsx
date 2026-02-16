@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BookOpen, Users, Award, PlayCircle, Moon } from "lucide-react";
+import Quran from "../assets/quran.jpg";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,7 +17,7 @@ const Hero = () => {
       {/* BACKGROUND LAYER: Quran Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=2070&auto=format&fit=crop" 
+          src={Quran}
           alt="Holy Quran"
           className="w-full h-full object-cover opacity-25"
         />
