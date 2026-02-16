@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,25 +10,25 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const menuItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Courses', href: '#courses' },
-    { name: 'Teachers', href: '#teachers' },
-    { name: 'Features', href: '#features' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Courses", href: "#courses" },
+    { name: "Teachers", href: "#teachers" },
+    { name: "Features", href: "#features" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (e, href) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
@@ -37,20 +38,27 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg'
-            : 'bg-transparent'
+            ? "bg-white/95 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
+
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">Q</span>
+              <div>
+                <img
+                  src={logo}
+                  alt="Quran Sabaq Logo"
+                  className="h-12 w-12 object-contain"
+                />
               </div>
-              <span className={`text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ${
-                isScrolled ? '' : 'text-white'
-              }`}>
+              <span
+                className={`text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ${
+                  isScrolled ? "" : "text-white"
+                }`}
+              >
                 Quran Sabaq
               </span>
             </div>
@@ -64,8 +72,8 @@ const Navbar = () => {
                   onClick={(e) => scrollToSection(e, item.href)}
                   className={`font-medium transition-all duration-300 hover:scale-110 ${
                     isScrolled
-                      ? 'text-gray-700 hover:text-blue-600'
-                      : 'text-white hover:text-blue-200'
+                      ? "text-gray-700 hover:text-blue-600"
+                      : "text-white hover:text-blue-200"
                   }`}
                 >
                   {item.name}
@@ -81,7 +89,10 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(true)}
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              <Menu className={isScrolled ? 'text-gray-700' : 'text-white'} size={28} />
+              <Menu
+                className={isScrolled ? "text-gray-700" : "text-white"}
+                size={28}
+              />
             </button>
           </div>
         </div>
@@ -90,7 +101,9 @@ const Navbar = () => {
       {/* Mobile Sidebar */}
       <div
         className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${
-          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
         {/* Backdrop */}
@@ -102,7 +115,7 @@ const Navbar = () => {
         {/* Sidebar */}
         <div
           className={`absolute top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ${
-            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="flex items-center justify-between p-6 border-b">
