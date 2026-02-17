@@ -1,16 +1,88 @@
-# React + Vite
+# 🕌 Quran Sabaq – Online Quran Academy Platform  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="https://quran-sabaq.vercel.app/" target="_blank">
+    <img src="https://via.placeholder.com/1200x600.png?text=Quran+Sabaq+Website+Preview" alt="Quran Sabaq Preview" width="100%" />
+  </a>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="https://quran-sabaq.vercel.app/"><strong>🔗 Live Preview</strong></a> • 
+  <a href="https://github.com/imama-ansari14/Quran-Sabaq"><strong>📂 Repository</strong></a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Quran Sabaq** is a professionally designed online Quran academy platform developed for a freelance client.
 
-## Expanding the ESLint configuration
+The website represents a modern Islamic educational academy offering:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📖 Quran Reading with Tajweed  
+- 👩‍🏫 Certified Male & Female Quran Teachers  
+- 🌍 Online Classes for Pakistan & International Students  
+- 👨‍👩‍👧‍👦 Learning Programs for Kids & Adults  
+- 🕒 Flexible Timings with One-on-One Sessions  
+
+The main objective was to build a **trust-focused, responsive, and high-performance website** that allows students worldwide to connect with experienced Quran teachers seamlessly.
+
+---
+
+## 🚀 Tech Stack
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/TailwindCSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC" />
+<img src="https://img.shields.io/badge/Responsive-Design-success?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Freelance-Client%20Project-blueviolet?style=for-the-badge" />
+
+</p>
+
+---
+
+## 🎯 Key Highlights
+
+✔️ Modern React Component Architecture  
+✔️ Optimized Development & Build using Vite  
+✔️ Clean UI using Tailwind CSS Utility Classes  
+✔️ Fully Responsive Layout (Mobile, Tablet, Desktop)  
+✔️ Reusable & Scalable Code Structure  
+✔️ Designed to Build Trust & Improve User Engagement  
+
+---
+
+## 📱 Responsive & Performance Optimized
+
+The platform is carefully designed to ensure:
+
+- Fast loading performance  
+- Smooth user experience  
+- Cross-device compatibility  
+- Clean and accessible interface  
+
+---
+
+## 💼 Freelance Client Project
+
+This project demonstrates my ability to:
+
+- Understand and translate client requirements into a production-ready application  
+- Deliver modern frontend solutions using React ecosystem  
+- Design structured and scalable UI systems  
+- Build professional educational platforms with strong branding  
+
+---
+
+
+## 👩‍💻 Developer
+
+**Imama Ansari**  
+Frontend Web Developer  
+
+🔗 GitHub: https://github.com/imama-ansari14  
+🔗 LinkedIn: https://www.linkedin.com/in/imama-ansari-5a604b337  
+
+---
