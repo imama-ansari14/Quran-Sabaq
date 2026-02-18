@@ -32,28 +32,28 @@ const About = () => {
       title: "Our Mission",
       description:
         "Making sacred knowledge accessible through modern technology.",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-blue-600 to-purple-500",
     },
     {
       icon: Heart,
       title: "Our Vision",
       description:
         "Nurturing a generation connected to the Quran by heart and mind.",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-blue-600 to-purple-500",
     },
     {
       icon: Star,
       title: "Expert Tutors",
       description:
         "Certified Qaris and scholars with years of teaching experience.",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-blue-600 to-purple-500",
     },
     {
       icon: TrendingUp,
       title: "Personalized",
       description:
         "One-on-one sessions tailored to every student’s unique pace.",
-      gradient: "from-green-500 to-teal-500",
+      gradient: "from-blue-600 to-purple-500",
     },
   ];
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Link, Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -18,8 +18,6 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Courses", href: "#courses" },
-    { name: "Teachers", href: "#teachers" },
-    { name: "Features", href: "#features" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
@@ -79,7 +77,15 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
+              <button
+                onClick={() => {
+                  const contactSection = document.querySelector("#contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              >
                 Enroll Now
               </button>
             </div>

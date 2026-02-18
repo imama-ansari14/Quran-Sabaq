@@ -68,12 +68,8 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-5 pt-4">
               {/* Button: Logo Blue Gradient */}
-              <button className="bg-gradient-to-r from-[#0081C9] to-[#0056b3] text-white px-10 py-5 rounded-xl font-bold text-lg hover:brightness-110 shadow-[0_10px_30px_rgba(0,129,201,0.3)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border-b-4 border-blue-900">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:brightness-110 shadow-[0_10px_30px_rgba(0,129,201,0.3)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border-b-4 border-blue-900">
                 Start 3-Day Free Trial
-              </button>
-              <button className="group flex items-center justify-center space-x-3 bg-white/5 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300">
-                <PlayCircle className="w-6 h-6 text-sky-400 group-hover:scale-110 transition-transform" />
-                <span>Our Teaching Method</span>
               </button>
             </div>
           </div>

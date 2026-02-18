@@ -50,30 +50,23 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      detail: "+92 300 1234567",
-      subdetail: "+92 321 7654321",
-      gradient: "from-blue-500 to-cyan-500",
+      detail: "03002207349",
+      subdetail: "whatsapp available",
+      gradient: "from-blue-600 to-purple-500",
     },
     {
       icon: Mail,
       title: "Email Us",
-      detail: "info@quransabaq.com",
-      subdetail: "support@quransabaq.com",
-      gradient: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      detail: "Karachi, Pakistan",
-      subdetail: "Serving Worldwide",
-      gradient: "from-orange-500 to-red-500",
+      detail: "quransabaq@gmail.com",
+      subdetail: "support available",
+      gradient: "from-blue-600 to-purple-500",
     },
     {
       icon: Clock,
       title: "Available",
       detail: "24/7 Support",
       subdetail: "All Days of Week",
-      gradient: "from-green-500 to-teal-500",
+      gradient: "from-blue-600 to-purple-500",
     },
   ];
 
@@ -111,7 +104,7 @@ const Contact = () => {
 
         {/* Contact Info Cards */}
         <div
-          className={`grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 transform transition-all duration-1000 delay-200 ${
+          className={`grid sm:grid-cols-3 lg:grid-cols-3 gap-8 mb-16 mx-auto max-w-7xl transform transition-all duration-1000 delay-200 center  ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
