@@ -1,8 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import { Mail, Phone, MapPin, Send, MessageCircle, Clock } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  MessageCircle,
+  Clock,
+  ChevronDown,
+  BookOpen,
+  DollarSign,
+  Clock3,
+  GraduationCap,
+  Gift,
+  Laptop,
+} from "lucide-react";
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [openFaq, setOpenFaq] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,7 +50,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log("Form submitted:", formData);
   };
 
@@ -44,6 +58,10 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
   };
 
   const contactInfo = [
@@ -67,6 +85,51 @@ const Contact = () => {
       detail: "24/7 Support",
       subdetail: "All Days of Week",
       gradient: "from-blue-600 to-purple-500",
+    },
+  ];
+
+  const faqs = [
+    {
+      icon: BookOpen,
+      question: "What courses do you offer?",
+      answer:
+        "We offer comprehensive Quran education programs including Quran Reading (Nazra), Quran Memorization (Hifz), Tajweed Mastery, Tafseer & Translation, Islamic Studies, and a specialized Kids Quran Program. Each course is designed to meet the needs of students at every level.",
+      gradient: "from-blue-500 to-cyan-500",
+    },
+    {
+      icon: DollarSign,
+      question: "What are your course fees?",
+      answer:
+        "Our course fees vary depending on the program selected. We offer flexible pricing plans to accommodate different budgets. Contact us for detailed pricing information and special family discounts. We also provide a free trial class so you can experience our teaching quality firsthand.",
+      gradient: "from-green-500 to-teal-500",
+    },
+    {
+      icon: Clock3,
+      question: "How flexible are the class timings?",
+      answer:
+        "We offer highly flexible scheduling with classes available 7 days a week, 24/7. You can choose timings that fit your schedule, and our teachers will accommodate your preferred time slots. We understand that our students are from different time zones worldwide.",
+      gradient: "from-orange-500 to-red-500",
+    },
+    {
+      icon: GraduationCap,
+      question: "Are your teachers qualified?",
+      answer:
+        "Yes, all our teachers are highly qualified with Ijazah certification and years of teaching experience. They are fluent in Urdu, English, and Arabic. Our teachers undergo rigorous screening and training to ensure the highest quality of Quran education.",
+      gradient: "from-purple-500 to-pink-500",
+    },
+    {
+      icon: Gift,
+      question: "Do you offer a free trial class?",
+      answer:
+        "Absolutely! We offer a complimentary trial class so you can experience our teaching methodology and interact with our teachers before enrolling. No credit card or payment is required for the trial. Simply contact us to schedule your free trial session.",
+      gradient: "from-pink-500 to-rose-500",
+    },
+    {
+      icon: Laptop,
+      question: "What equipment do I need for online classes?",
+      answer:
+        "You'll need a computer, tablet, or smartphone with a stable internet connection, a webcam, and a microphone or headset. We use user-friendly video conferencing platforms that work seamlessly across all devices. Technical support is available if you need assistance with setup.",
+      gradient: "from-indigo-500 to-blue-500",
     },
   ];
 
@@ -104,7 +167,7 @@ const Contact = () => {
 
         {/* Contact Info Cards */}
         <div
-          className={`grid sm:grid-cols-3 lg:grid-cols-3 gap-8 mb-16 mx-auto max-w-7xl transform transition-all duration-1000 delay-200 center  ${
+          className={`grid sm:grid-cols-3 lg:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto transform transition-all duration-1000 delay-200 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
@@ -241,67 +304,84 @@ const Contact = () => {
             }`}
           >
             <div className="h-full flex flex-col space-y-6">
-              {/* Quick Contact Card */}
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 text-white">
-                <MessageCircle className="w-12 h-12 mb-4" />
-                <h3 className="text-2xl font-bold mb-4">
-                  Start Your Free Trial Today!
-                </h3>
-                <p className="text-blue-100 mb-6 leading-relaxed">
-                  Experience our teaching quality firsthand with a complimentary
-                  trial class. No credit card required!
-                </p>
-                <button className="w-full bg-white text-blue-600 py-3 rounded-xl font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                  Book Free Trial Class
-                </button>
-              </div>
-
-              {/* WhatsApp Contact */}
-              <div className="bg-green-50 border-2 border-green-200 rounded-3xl p-8">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
-                    <MessageCircle className="w-8 h-8 text-white" />
+              {/* WhatsApp Contact - CLICKABLE */}
+              <a
+                href="https://wa.me/923002207349"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-green-50 border-2 border-green-200 rounded-3xl p-8 hover:border-green-400 transition-all duration-300 cursor-pointer transform hover:scale-105">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+                      <MessageCircle className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-gray-900">
+                        Quick Response
+                      </h4>
+                      <p className="text-gray-600">via WhatsApp</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-900">
-                      Quick Response
-                    </h4>
-                    <p className="text-gray-600">via WhatsApp</p>
+                  <p className="text-gray-700 mb-4">
+                    Get instant answers to your questions on WhatsApp
+                  </p>
+                  <div className="w-full bg-green-500 text-white py-3 rounded-xl font-bold hover:bg-green-600 transform hover:scale-105 transition-all duration-300 text-center">
+                    Chat on WhatsApp
                   </div>
                 </div>
-                <p className="text-gray-700 mb-4">
-                  Get instant answers to your questions on WhatsApp
-                </p>
-                <button className="w-full bg-green-500 text-white py-3 rounded-xl font-bold hover:bg-green-600 transform hover:scale-105 transition-all duration-300">
-                  Chat on WhatsApp
-                </button>
-              </div>
+              </a>
 
-              {/* FAQ Link */}
+              {/* FAQ Accordion */}
               <div className="bg-gray-50 rounded-3xl p-8">
-                <h4 className="text-xl font-bold text-gray-900 mb-4">
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">
                   Frequently Asked Questions
                 </h4>
-                <p className="text-gray-600 mb-4">
-                  Find quick answers to common questions about our courses,
-                  pricing, and enrollment process.
-                </p>
-                <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300 flex items-center space-x-2">
-                  <span>View FAQs</span>
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
+                <div className="space-y-4">
+                  {faqs.map((faq, index) => (
+                    <div
+                      key={index}
+                      className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300"
+                    >
+                      <button
+                        onClick={() => toggleFaq(index)}
+                        className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-all duration-300"
+                      >
+                        <div className="flex items-center space-x-4">
+                          <div
+                            className={`w-10 h-10 rounded-lg bg-gradient-to-br ${faq.gradient} flex items-center justify-center flex-shrink-0`}
+                          >
+                            <faq.icon className="w-5 h-5 text-white" />
+                          </div>
+                          <span className="font-semibold text-gray-900 text-left">
+                            {faq.question}
+                          </span>
+                        </div>
+                        <ChevronDown
+                          className={`w-5 h-5 text-gray-500 transition-transform duration-500 flex-shrink-0 ${
+                            openFaq === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <div
+                        className={`transition-all duration-500 ease-in-out ${
+                          openFaq === index
+                            ? "max-h-96 opacity-100"
+                            : "max-h-0 opacity-0"
+                        }`}
+                        style={{
+                          overflow: "hidden",
+                        }}
+                      >
+                        <div className="px-6 py-5 bg-gray-50 border-t border-gray-200">
+                          <p className="text-gray-700 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

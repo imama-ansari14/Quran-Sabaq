@@ -67,7 +67,6 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 pt-4">
-              {/* Button: Logo Blue Gradient */}
               <button className="bg-gradient-to-r from-blue-600 to-purple-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:brightness-110 shadow-[0_10px_30px_rgba(0,129,201,0.3)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border-b-4 border-blue-900">
                 Start 3-Day Free Trial
               </button>
