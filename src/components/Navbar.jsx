@@ -17,7 +17,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Courses", href: "#courses" },
+    { name: "Fee And Pricing", href: "#Fee" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];

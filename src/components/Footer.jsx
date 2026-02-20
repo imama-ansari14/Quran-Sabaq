@@ -1,13 +1,5 @@
 import logo from "../assets/logo.png";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,10 +14,10 @@ const Footer = () => {
     ],
     quickLinks: [
       { name: "About Us", href: "#about" },
-      { name: "Our Teachers", href: "#teachers" },
-      { name: "Pricing Plans", href: "#contact" },
+      { name: "Pricing Plans", href: "#Fees" },
       { name: "Free Trial", href: "#contact" },
       { name: "Testimonials", href: "#testimonials" },
+      { name: "Contact Us", href: "#contact" },
     ],
     support: [
       { name: "Help Center", href: "#contact" },
@@ -37,8 +29,16 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", color: "hover:bg-blue-600" },
-    { icon: Instagram, href: "#", color: "hover:bg-pink-600" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/QuranSabaq",
+      color: "hover:bg-blue-600",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/quran_sabaq1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      color: "hover:bg-pink-600",
+    },
   ];
 
   return (
@@ -62,11 +62,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-blue-200 hover:text-white transition-colors duration-300">
                 <Phone className="w-5 h-5" />
-                <span>+92 300 1234567</span>
+                <span>03002207349</span>
               </div>
               <div className="flex items-center space-x-3 text-blue-200 hover:text-white transition-colors duration-300">
                 <Mail className="w-5 h-5" />
-                <span>info@quransabaq.com</span>
+                <span>quransabaq@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-blue-200 hover:text-white transition-colors duration-300">
                 <MapPin className="w-5 h-5" />

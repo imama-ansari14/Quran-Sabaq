@@ -94,42 +94,42 @@ const Contact = () => {
       question: "What courses do you offer?",
       answer:
         "We offer comprehensive Quran education programs including Quran Reading (Nazra), Quran Memorization (Hifz), Tajweed Mastery, Tafseer & Translation, Islamic Studies, and a specialized Kids Quran Program. Each course is designed to meet the needs of students at every level.",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-blue-600 to-purple-700",
     },
     {
       icon: DollarSign,
       question: "What are your course fees?",
       answer:
         "Our course fees vary depending on the program selected. We offer flexible pricing plans to accommodate different budgets. Contact us for detailed pricing information and special family discounts. We also provide a free trial class so you can experience our teaching quality firsthand.",
-      gradient: "from-green-500 to-teal-500",
+      gradient: "from-blue-600 to-purple-700",
     },
     {
       icon: Clock3,
       question: "How flexible are the class timings?",
       answer:
         "We offer highly flexible scheduling with classes available 7 days a week, 24/7. You can choose timings that fit your schedule, and our teachers will accommodate your preferred time slots. We understand that our students are from different time zones worldwide.",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-blue-600 to-purple-700",
     },
     {
       icon: GraduationCap,
       question: "Are your teachers qualified?",
       answer:
         "Yes, all our teachers are highly qualified with Ijazah certification and years of teaching experience. They are fluent in Urdu, English, and Arabic. Our teachers undergo rigorous screening and training to ensure the highest quality of Quran education.",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-blue-600 to-purple-700",
     },
     {
       icon: Gift,
       question: "Do you offer a free trial class?",
       answer:
         "Absolutely! We offer a complimentary trial class so you can experience our teaching methodology and interact with our teachers before enrolling. No credit card or payment is required for the trial. Simply contact us to schedule your free trial session.",
-      gradient: "from-pink-500 to-rose-500",
+      gradient: "from-blue-600 to-purple-700",
     },
     {
       icon: Laptop,
       question: "What equipment do I need for online classes?",
       answer:
         "You'll need a computer, tablet, or smartphone with a stable internet connection, a webcam, and a microphone or headset. We use user-friendly video conferencing platforms that work seamlessly across all devices. Technical support is available if you need assistance with setup.",
-      gradient: "from-indigo-500 to-blue-500",
+      gradient: "from-blue-600 to-purple-700",
     },
   ];
 
