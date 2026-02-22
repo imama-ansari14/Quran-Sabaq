@@ -21,8 +21,8 @@ const arabicPlans = [
     frequency: "2 Days Every Week",
     duration: "30 Min / Session",
     lessons: "8 Lessons / Month",
-    priceUSD: "$39",
-    priceGBP: "£25",
+    priceUSD: "$37",
+    priceGBP: "£29",
     color: "from-blue-600 to-purple-700",
   },
   {
@@ -31,8 +31,8 @@ const arabicPlans = [
     frequency: "3 Days Every Week",
     duration: "30 Min / Session",
     lessons: "12 Lessons / Month",
-    priceUSD: "$45",
-    priceGBP: "£30",
+    priceUSD: "$50",
+    priceGBP: "£38",
     color: "from-blue-600 to-purple-700",
     popular: true,
   },
@@ -42,8 +42,8 @@ const arabicPlans = [
     frequency: "4 Days Every Week",
     duration: "30 Min / Session",
     lessons: "16 Lessons / Month",
-    priceUSD: "$59",
-    priceGBP: "£35",
+    priceUSD: "$65",
+    priceGBP: "£50",
     color: "from-blue-600 to-purple-700",
   },
   {
@@ -52,8 +52,8 @@ const arabicPlans = [
     frequency: "5 Days Every Week",
     duration: "30 Min / Session",
     lessons: "20 Lessons / Month",
-    priceUSD: "$69",
-    priceGBP: "£39",
+    priceUSD: "$78",
+    priceGBP: "£58",
     color: "from-blue-600 to-purple-700",
   },
 ];
@@ -65,8 +65,8 @@ const weekendPlans = [
     frequency: "Sat & Sun",
     duration: "30 Min / Session",
     lessons: "8 Lessons / Month",
-    priceUSD: "$30",
-    priceGBP: "£22",
+    priceUSD: "$37",
+    priceGBP: "£29",
     color: "from-blue-600 to-purple-700",
   },
   {
@@ -87,6 +87,7 @@ const courses = [
     subtitle: "For Beginners",
     tag: "Courses",
     icon: BookOpen,
+    color: "from-blue-600 to-purple-700",
     features: [
       "Identify Arabic Alphabets",
       "Read Holy Quran with Tajweed Rules",
@@ -102,6 +103,7 @@ const courses = [
     subtitle: "Language & Grammar",
     tag: "Courses",
     icon: Star,
+    color: "from-blue-600 to-purple-700",
     features: [
       "Arabic Alphabets to language",
       "Arabic grammar rules",
@@ -115,6 +117,7 @@ const courses = [
     subtitle: "Hifz & Tafseer",
     tag: "Courses",
     icon: Award,
+    color: "from-blue-600 to-purple-700",
     features: [
       "Memorize Quran by heart",
       "Memorize Tajweed rules",
@@ -127,6 +130,7 @@ const courses = [
     subtitle: "Diploma Course",
     tag: "Courses",
     icon: BookOpen,
+    color: "from-blue-600 to-purple-700",
     features: [
       "Diploma Course",
       "Word by word translation",
@@ -138,6 +142,7 @@ const courses = [
     subtitle: "Recitation Course",
     tag: "Courses",
     icon: Users,
+    color: "from-blue-600 to-purple-700",
     features: [
       "Recitation of Holy Quran",
       "Application of Tarteel & Tajweed rules",
@@ -148,113 +153,115 @@ const courses = [
     subtitle: "Basic Islamic Education",
     tag: "Courses",
     icon: Zap,
+    color: "from-blue-600 to-purple-700",
     features: ["Basic Islamic Education", "Learn Duas, prayers, six kalimas"],
   },
 ];
 
 const allItems = [...arabicPlans, ...weekendPlans, ...courses];
 
-const PlanCard = ({ item, index }) => {
+const PlanCard = ({ item }) => {
   const isPricing = !!item.priceUSD;
-
-  if (isPricing) {
-    return (
-      <div
-        className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col"
-        style={{ animationDelay: `${index * 60}ms` }}
-      >
-        {item.popular && (
-          <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow">
-            Most Popular
-          </div>
-        )}
-        {/* Top color bar */}
-        <div className={`h-2 w-full bg-gradient-to-r ${item.color}`} />
-
-        <div className="p-6 flex flex-col flex-1">
-          {/* Tag */}
-          <span className="text-xs font-semibold text-blue-500 uppercase tracking-widest mb-2">
-            {item.tag}
-          </span>
-
-          <h4 className="text-2xl font-extrabold text-gray-900 mb-1">
-            {item.title}
-          </h4>
-
-          {/* Price */}
-          <div className="mt-4 mb-6">
-            <div className="flex items-end gap-2">
-              <span
-                className={`text-4xl font-black bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}
-              >
-                {item.priceUSD}
-              </span>
-              <span className="text-xl font-bold text-gray-400 mb-1">
-                / {item.priceGBP}
-              </span>
-            </div>
-            <p className="text-xs text-gray-400 font-medium mt-1">per month</p>
-          </div>
-
-          {/* Details */}
-          <div className="space-y-3 flex-1">
-            <div className="flex items-center gap-3 bg-blue-50 px-4 py-2.5 rounded-xl">
-              <Calendar className="w-4 h-4 text-blue-500 shrink-0" />
-              <span className="text-sm text-gray-700 font-medium">
-                {item.frequency}
-              </span>
-            </div>
-            <div className="flex items-center gap-3 bg-purple-50 px-4 py-2.5 rounded-xl">
-              <Clock className="w-4 h-4 text-purple-500 shrink-0" />
-              <span className="text-sm text-gray-700 font-medium">
-                {item.duration}
-              </span>
-            </div>
-            <div className="flex items-center gap-3 bg-indigo-50 px-4 py-2.5 rounded-xl">
-              <BookOpen className="w-4 h-4 text-indigo-500 shrink-0" />
-              <span className="text-sm text-gray-700 font-medium">
-                {item.lessons}
-              </span>
-            </div>
-          </div>
-
-          <button
-            className={`mt-6 w-full bg-gradient-to-r ${item.color} text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group`}
-          >
-            Choose Plan
-            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  // Course Card
   const Icon = item.icon;
+
   return (
-    <div
-      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 hover:-translate-y-2 flex flex-col"
-      style={{ animationDelay: `${index * 60}ms` }}
-    >
-      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center mb-4 shadow-lg">
-        <Icon className="w-6 h-6 text-white" />
+    <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col w-full h-full">
+      {item.popular && (
+        <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow">
+          Most Popular
+        </div>
+      )}
+
+      {/* Top color bar */}
+      <div className={`h-2 w-full bg-gradient-to-r ${item.color} shrink-0`} />
+
+      <div className="p-6 flex flex-col flex-1">
+        {/* Fixed-height top zone: icon placeholder or icon — keeps tag/title aligned */}
+        <div className="h-16 shrink-0 flex items-start">
+          {!isPricing && Icon ? (
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center shadow-lg">
+              <Icon className="w-6 h-6 text-white" />
+            </div>
+          ) : null}
+        </div>
+
+        {/* Tag / subtitle */}
+        <span className="text-xs font-semibold text-blue-500 uppercase tracking-widest mb-2">
+          {isPricing ? item.tag : item.subtitle}
+        </span>
+
+        <h4 className="text-2xl font-extrabold text-gray-900 mb-1">
+          {item.title}
+        </h4>
+
+        {/* Fixed-height price zone — keeps content below aligned across card types */}
+        <div className="h-20 shrink-0">
+          {isPricing && (
+            <div className="mt-3">
+              <div className="flex items-end gap-2">
+                <span
+                  className={`text-4xl font-black bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}
+                >
+                  {item.priceUSD}
+                </span>
+                <span className="text-xl font-bold text-gray-400 mb-1">
+                  / {item.priceGBP}
+                </span>
+              </div>
+              <p className="text-xs text-gray-400 font-medium mt-1">
+                per month
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* Flex-grow content area */}
+        <div className="flex-1">
+          {isPricing && (
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 bg-blue-50 px-4 py-2.5 rounded-xl">
+                <Calendar className="w-4 h-4 text-blue-500 shrink-0" />
+                <span className="text-sm text-gray-700 font-medium">
+                  {item.frequency}
+                </span>
+              </div>
+              <div className="flex items-center gap-3 bg-purple-50 px-4 py-2.5 rounded-xl">
+                <Clock className="w-4 h-4 text-purple-500 shrink-0" />
+                <span className="text-sm text-gray-700 font-medium">
+                  {item.duration}
+                </span>
+              </div>
+              <div className="flex items-center gap-3 bg-indigo-50 px-4 py-2.5 rounded-xl">
+                <BookOpen className="w-4 h-4 text-indigo-500 shrink-0" />
+                <span className="text-sm text-gray-700 font-medium">
+                  {item.lessons}
+                </span>
+              </div>
+            </div>
+          )}
+
+          {!isPricing && (
+            <ul className="space-y-2">
+              {item.features.map((f, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="mt-1 w-4 h-4 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
+                    <Check className="w-2.5 h-2.5 text-blue-600" />
+                  </span>
+                  <span className="text-sm text-gray-600">{f}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        {/* CTA Button — always at bottom */}
+        <button
+          className={`mt-6 w-full bg-gradient-to-r ${item.color} text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group shrink-0`}
+        >
+          {isPricing ? "Choose Plan" : "Enroll Now"}
+          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </button>
       </div>
-      <span className="text-xs font-semibold text-purple-500 uppercase tracking-widest mb-1">
-        {item.subtitle}
-      </span>
-      <h4 className="text-lg font-extrabold text-gray-900 mb-4">
-        {item.title}
-      </h4>
-      <ul className="space-y-2 flex-1">
-        {item.features.map((f, i) => (
-          <li key={i} className="flex items-start gap-2">
-            <span className="mt-1 w-4 h-4 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-              <Check className="w-2.5 h-2.5 text-blue-600" />
-            </span>
-            <span className="text-sm text-gray-600">{f}</span>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
@@ -323,7 +330,7 @@ const Fee = () => {
 
           {/* Banners */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-3xl mx-auto">
-            <div className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-4 rounded-2xl shadow-xl flex items-center justify-center gap-2">
+            <div className="flex-1 bg-gradient-to-r from-blue-600 to-purple-700 text-white px-6 py-4 rounded-2xl shadow-xl flex items-center justify-center gap-2">
               <Sparkles className="w-5 h-5 animate-pulse shrink-0" />
               <p className="font-bold text-sm md:text-base">
                 Available 24/7 · First week FREE trial!
@@ -373,61 +380,24 @@ const Fee = () => {
           </span>
         </div>
 
-        {/* Grid */}
+        {/* Grid — flex items stretch to fill row height equally */}
         <div
           key={animKey}
           className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          style={{ alignItems: "stretch" }}
         >
           {filtered.map((item, i) => (
             <div
               key={`${item.title}-${i}`}
-              className="animate-fade-in-up"
+              className="animate-fade-in-up flex"
               style={{
                 animationDelay: `${i * 60}ms`,
                 animationFillMode: "both",
               }}
             >
-              <PlanCard item={item} index={i} />
+              <PlanCard item={item} />
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div
-          className={`mt-20 transition-all duration-1000 delay-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-10 text-white text-center shadow-2xl relative overflow-hidden">
-            <div className="absolute -top-16 -left-16 w-56 h-56 bg-white/10 rounded-full" />
-            <div className="absolute -bottom-16 -right-16 w-56 h-56 bg-white/10 rounded-full" />
-            <div className="relative z-10">
-              <Zap className="w-12 h-12 mx-auto mb-4 animate-bounce" />
-              <h3 className="text-3xl md:text-4xl font-extrabold mb-3">
-                Still Have Questions?
-              </h3>
-              <p className="text-blue-100 text-lg mb-8 max-w-xl mx-auto">
-                Let our expert counselors help you choose the perfect plan for
-                your learning journey
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact">
-                  <button className="bg-white text-blue-600 px-8 py-3.5 rounded-full font-bold text-base hover:shadow-xl hover:scale-105 transition-all duration-300">
-                    Contact Us Now
-                  </button>
-                </a>
-                <a
-                  href="https://wa.me/923002207349"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="border-2 border-white text-white px-8 py-3.5 rounded-full font-bold text-base hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105">
-                    WhatsApp Us
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
