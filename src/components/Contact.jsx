@@ -97,24 +97,10 @@ const Contact = () => {
       gradient: "from-blue-600 to-purple-700",
     },
     {
-      icon: DollarSign,
-      question: "What are your course fees?",
-      answer:
-        "Our course fees vary depending on the program selected. We offer flexible pricing plans to accommodate different budgets. Contact us for detailed pricing information and special family discounts. We also provide a free trial class so you can experience our teaching quality firsthand.",
-      gradient: "from-blue-600 to-purple-700",
-    },
-    {
       icon: Clock3,
       question: "How flexible are the class timings?",
       answer:
         "We offer highly flexible scheduling with classes available 7 days a week, 24/7. You can choose timings that fit your schedule, and our teachers will accommodate your preferred time slots. We understand that our students are from different time zones worldwide.",
-      gradient: "from-blue-600 to-purple-700",
-    },
-    {
-      icon: GraduationCap,
-      question: "Are your teachers qualified?",
-      answer:
-        "Yes, all our teachers are highly qualified with Ijazah certification and years of teaching experience. They are fluent in Urdu, English, and Arabic. Our teachers undergo rigorous screening and training to ensure the highest quality of Quran education.",
       gradient: "from-blue-600 to-purple-700",
     },
     {

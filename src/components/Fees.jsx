@@ -254,19 +254,20 @@ const PlanCard = ({ item }) => {
           )}
         </div>
 
-        {/* CTA Button — always at bottom */}
-        <button
-          className={`mt-6 w-full bg-gradient-to-r ${item.color} text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group shrink-0`}
-        >
-          {isPricing ? "Choose Plan" : "Enroll Now"}
-          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </button>
+        <a href="#contact" className="mt-6 w-full">
+          <button
+            className={`w-full bg-gradient-to-r ${item.color} text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group shrink-0`}
+          >
+            {isPricing ? "Choose Plan" : "Enroll Now"}
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </a>
       </div>
     </div>
   );
 };
 
-const Fee = () => {
+const Fees = () => {
   const [activeFilter, setActiveFilter] = useState("All Courses");
   const [isVisible, setIsVisible] = useState(false);
   const [animKey, setAnimKey] = useState(0);
@@ -297,7 +298,7 @@ const Fee = () => {
 
   return (
     <section
-      id="fee"
+      id="fees"
       ref={sectionRef}
       className="py-24 bg-slate-50 overflow-hidden relative"
     >
@@ -415,4 +416,4 @@ const Fee = () => {
   );
 };
 
-export default Fee;
+export default Fees;

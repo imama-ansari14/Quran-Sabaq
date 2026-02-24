@@ -53,23 +53,23 @@ const Hero = () => {
 
             <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight">
               Nurture Your Soul with
-              {/* Text Gradient matching the Logo's Blue shades */}
-              <span className="block mt-2 bg-gradient-to-r from-blue-400 via-sky-300 to-blue-600 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-700 bg-clip-text text-transparent">
                 Quranic Wisdom
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl italic">
               "The best among you are those who learn the Quran and teach it."
-              <span className="block text-sm not-italic mt-2 text-blue-400 font-bold">
+              <span className="block text-sm not-italic mt-2 text-blue-500 font-bold">
                 — Sahih Al-Bukhari
               </span>
             </p>
-
             <div className="flex flex-col sm:flex-row gap-5 pt-4">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:brightness-110 shadow-[0_10px_30px_rgba(0,129,201,0.3)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border-b-4 border-blue-900">
-                Start 3-Day Free Trial
-              </button>
+              <a href="#contact">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-700 text-white px-10 py-5 rounded-xl font-bold text-lg hover:brightness-110 shadow-[0_10px_30px_rgba(0,129,201,0.3)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 border-b-4 border-blue-900">
+                  Start 3-Day Free Trial
+                </button>
+              </a>
             </div>
           </div>
 
