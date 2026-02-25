@@ -11,11 +11,7 @@ import {
   Sparkles,
   ChevronRight,
 } from "lucide-react";
-
-// ─────────────────────────────────────────────
-//  SECTION 1 — Monthly Packages for Online Quran Courses
-//  Duration sub-tabs: 30 Min | 45 Min | 60 Min | Group Class (3-5 students)
-// ─────────────────────────────────────────────
+// Monthly Packages for Online Quran Courses
 const QURAN_DURATION_TABS = [
   "30 Minutes",
   "45 Minutes",
@@ -25,35 +21,143 @@ const QURAN_DURATION_TABS = [
 
 const quranPricingData = {
   "30 Minutes": [
-    { days: "2 DAYS/WEEK", priceUSD: "$37", priceGBP: "£29", duration: "30 Min / Session", lessons: "8 Classes/Month", popular: false },
-    { days: "3 DAYS/WEEK", priceUSD: "$50", priceGBP: "£38", duration: "30 Min / Session", lessons: "12 Classes/Month", popular: true },
-    { days: "4 DAYS/WEEK", priceUSD: "$65", priceGBP: "£50", duration: "30 Min / Session", lessons: "16 Classes/Month", popular: false },
-    { days: "5 DAYS/WEEK", priceUSD: "$78", priceGBP: "£58", duration: "30 Min / Session", lessons: "20 Classes/Month", popular: false },
+    {
+      days: "2 DAYS/WEEK",
+      priceUSD: "$37",
+      priceGBP: "£29",
+      duration: "30 Min / Session",
+      lessons: "8 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "3 DAYS/WEEK",
+      priceUSD: "$50",
+      priceGBP: "£38",
+      duration: "30 Min / Session",
+      lessons: "12 Classes/Month",
+      popular: true,
+    },
+    {
+      days: "4 DAYS/WEEK",
+      priceUSD: "$65",
+      priceGBP: "£50",
+      duration: "30 Min / Session",
+      lessons: "16 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "5 DAYS/WEEK",
+      priceUSD: "$78",
+      priceGBP: "£58",
+      duration: "30 Min / Session",
+      lessons: "20 Classes/Month",
+      popular: false,
+    },
   ],
   "45 Minutes": [
-    { days: "2 DAYS/WEEK", priceUSD: "$55", priceGBP: "£45", duration: "45 Min / Session", lessons: "8 Classes/Month", popular: false },
-    { days: "3 DAYS/WEEK", priceUSD: "$75", priceGBP: "£58", duration: "45 Min / Session", lessons: "12 Classes/Month", popular: true },
-    { days: "4 DAYS/WEEK", priceUSD: "$95", priceGBP: "£75", duration: "45 Min / Session", lessons: "16 Classes/Month", popular: false },
-    { days: "5 DAYS/WEEK", priceUSD: "$120", priceGBP: "£85", duration: "45 Min / Session", lessons: "20 Classes/Month", popular: false },
+    {
+      days: "2 DAYS/WEEK",
+      priceUSD: "$55",
+      priceGBP: "£45",
+      duration: "45 Min / Session",
+      lessons: "8 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "3 DAYS/WEEK",
+      priceUSD: "$75",
+      priceGBP: "£58",
+      duration: "45 Min / Session",
+      lessons: "12 Classes/Month",
+      popular: true,
+    },
+    {
+      days: "4 DAYS/WEEK",
+      priceUSD: "$95",
+      priceGBP: "£75",
+      duration: "45 Min / Session",
+      lessons: "16 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "5 DAYS/WEEK",
+      priceUSD: "$120",
+      priceGBP: "£85",
+      duration: "45 Min / Session",
+      lessons: "20 Classes/Month",
+      popular: false,
+    },
   ],
   "60 Minutes": [
-    { days: "2 DAYS/WEEK", priceUSD: "$70", priceGBP: "£55", duration: "60 Min / Session", lessons: "8 Classes/Month", popular: false },
-    { days: "3 DAYS/WEEK", priceUSD: "$95", priceGBP: "£72", duration: "60 Min / Session", lessons: "12 Classes/Month", popular: true },
-    { days: "4 DAYS/WEEK", priceUSD: "$120", priceGBP: "£92", duration: "60 Min / Session", lessons: "16 Classes/Month", popular: false },
-    { days: "5 DAYS/WEEK", priceUSD: "$145", priceGBP: "£110", duration: "60 Min / Session", lessons: "20 Classes/Month", popular: false },
+    {
+      days: "2 DAYS/WEEK",
+      priceUSD: "$70",
+      priceGBP: "£55",
+      duration: "60 Min / Session",
+      lessons: "8 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "3 DAYS/WEEK",
+      priceUSD: "$95",
+      priceGBP: "£72",
+      duration: "60 Min / Session",
+      lessons: "12 Classes/Month",
+      popular: true,
+    },
+    {
+      days: "4 DAYS/WEEK",
+      priceUSD: "$120",
+      priceGBP: "£92",
+      duration: "60 Min / Session",
+      lessons: "16 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "5 DAYS/WEEK",
+      priceUSD: "$145",
+      priceGBP: "£110",
+      duration: "60 Min / Session",
+      lessons: "20 Classes/Month",
+      popular: false,
+    },
   ],
   "Group Class (3 to 5 students)": [
-    { days: "2 DAYS/WEEK", priceUSD: "$21", priceGBP: "£17", duration: "45 Min / Session", lessons: "8 Classes/Month", popular: false },
-    { days: "3 DAYS/WEEK", priceUSD: "$25", priceGBP: "£19", duration: "45 Min / Session", lessons: "12 Classes/Month", popular: true },
-    { days: "4 DAYS/WEEK", priceUSD: "$35", priceGBP: "£27", duration: "45 Min / Session", lessons: "16 Classes/Month", popular: false },
-    { days: "5 DAYS/WEEK", priceUSD: "$45", priceGBP: "£35", duration: "45 Min / Session", lessons: "20 Classes/Month", popular: false },
+    {
+      days: "2 DAYS/WEEK",
+      priceUSD: "$21",
+      priceGBP: "£17",
+      duration: "45 Min / Session",
+      lessons: "8 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "3 DAYS/WEEK",
+      priceUSD: "$25",
+      priceGBP: "£19",
+      duration: "45 Min / Session",
+      lessons: "12 Classes/Month",
+      popular: true,
+    },
+    {
+      days: "4 DAYS/WEEK",
+      priceUSD: "$35",
+      priceGBP: "£27",
+      duration: "45 Min / Session",
+      lessons: "16 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "5 DAYS/WEEK",
+      priceUSD: "$45",
+      priceGBP: "£35",
+      duration: "45 Min / Session",
+      lessons: "20 Classes/Month",
+      popular: false,
+    },
   ],
 };
-
-// ─────────────────────────────────────────────
-//  SECTION 2 — Monthly Plans for Tafseer Quran and Advance Arabic Course
-//  Duration sub-tabs: 30 Min | 45 Min | 60 Min | Group Classes (45 Min)
-// ─────────────────────────────────────────────
+// Monthly Plans for Tafseer Quran and Advance Arabic Course
 const TAFSEER_DURATION_TABS = [
   "30 Minutes",
   "45 Minutes",
@@ -63,34 +167,144 @@ const TAFSEER_DURATION_TABS = [
 
 const tafseerPricingData = {
   "30 Minutes": [
-    { days: "2 DAYS/WEEK", priceUSD: "$45", priceGBP: "£40", duration: "30 Min / Session", lessons: "8 Classes/Month", popular: false },
-    { days: "3 DAYS/WEEK", priceUSD: "$58", priceGBP: "£50", duration: "30 Min / Session", lessons: "12 Classes/Month", popular: true },
-    { days: "4 DAYS/WEEK", priceUSD: "$75", priceGBP: "£65", duration: "30 Min / Session", lessons: "16 Classes/Month", popular: false },
-    { days: "5 DAYS/WEEK", priceUSD: "$85", priceGBP: "£75", duration: "30 Min / Session", lessons: "20 Classes/Month", popular: false },
+    {
+      days: "2 DAYS/WEEK",
+      priceUSD: "$45",
+      priceGBP: "£40",
+      duration: "30 Min / Session",
+      lessons: "8 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "3 DAYS/WEEK",
+      priceUSD: "$58",
+      priceGBP: "£50",
+      duration: "30 Min / Session",
+      lessons: "12 Classes/Month",
+      popular: true,
+    },
+    {
+      days: "4 DAYS/WEEK",
+      priceUSD: "$75",
+      priceGBP: "£65",
+      duration: "30 Min / Session",
+      lessons: "16 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "5 DAYS/WEEK",
+      priceUSD: "$85",
+      priceGBP: "£75",
+      duration: "30 Min / Session",
+      lessons: "20 Classes/Month",
+      popular: false,
+    },
   ],
   "45 Minutes": [
-    { days: "2 DAYS/WEEK", priceUSD: "$30", priceGBP: "£25", duration: "45 Min / Session", lessons: "06 Hours/Month", popular: false },
-    { days: "3 DAYS/WEEK", priceUSD: "$35", priceGBP: "£30", duration: "45 Min / Session", lessons: "09 Hours/Month", popular: true },
-    { days: "4 DAYS/WEEK", priceUSD: "$40", priceGBP: "£35", duration: "45 Min / Session", lessons: "12 Hours/Month", popular: false },
-    { days: "5 DAYS/WEEK", priceUSD: "$45", priceGBP: "£40", duration: "45 Min / Session", lessons: "15 Hours/Month", popular: false },
+    {
+      days: "2 DAYS/WEEK",
+      priceUSD: "$30",
+      priceGBP: "£25",
+      duration: "45 Min / Session",
+      lessons: "06 Hours/Month",
+      popular: false,
+    },
+    {
+      days: "3 DAYS/WEEK",
+      priceUSD: "$35",
+      priceGBP: "£30",
+      duration: "45 Min / Session",
+      lessons: "09 Hours/Month",
+      popular: true,
+    },
+    {
+      days: "4 DAYS/WEEK",
+      priceUSD: "$40",
+      priceGBP: "£35",
+      duration: "45 Min / Session",
+      lessons: "12 Hours/Month",
+      popular: false,
+    },
+    {
+      days: "5 DAYS/WEEK",
+      priceUSD: "$45",
+      priceGBP: "£40",
+      duration: "45 Min / Session",
+      lessons: "15 Hours/Month",
+      popular: false,
+    },
   ],
   "60 Minutes": [
-    { days: "2 DAYS/WEEK", priceUSD: "$85", priceGBP: "£75", duration: "60 Min / Session", lessons: "8 Hours/Month", popular: false },
-    { days: "3 DAYS/WEEK", priceUSD: "$112", priceGBP: "£100", duration: "60 Min / Session", lessons: "12 Hours/Month", popular: true },
-    { days: "4 DAYS/WEEK", priceUSD: "$145", priceGBP: "£125", duration: "60 Min / Session", lessons: "16 Hours/Month", popular: false },
-    { days: "5 DAYS/WEEK", priceUSD: "$165", priceGBP: "£145", duration: "60 Min / Session", lessons: "20 Hours/Month", popular: false },
+    {
+      days: "2 DAYS/WEEK",
+      priceUSD: "$85",
+      priceGBP: "£75",
+      duration: "60 Min / Session",
+      lessons: "8 Hours/Month",
+      popular: false,
+    },
+    {
+      days: "3 DAYS/WEEK",
+      priceUSD: "$112",
+      priceGBP: "£100",
+      duration: "60 Min / Session",
+      lessons: "12 Hours/Month",
+      popular: true,
+    },
+    {
+      days: "4 DAYS/WEEK",
+      priceUSD: "$145",
+      priceGBP: "£125",
+      duration: "60 Min / Session",
+      lessons: "16 Hours/Month",
+      popular: false,
+    },
+    {
+      days: "5 DAYS/WEEK",
+      priceUSD: "$165",
+      priceGBP: "£145",
+      duration: "60 Min / Session",
+      lessons: "20 Hours/Month",
+      popular: false,
+    },
   ],
   "Group Classes (45 Minutes)": [
-    { days: "2 DAYS/WEEK", priceUSD: "$21", priceGBP: "£17", duration: "45 Min / Session", lessons: "8 Classes/Month", popular: false },
-    { days: "3 DAYS/WEEK", priceUSD: "$25", priceGBP: "£19", duration: "45 Min / Session", lessons: "12 Classes/Month", popular: true },
-    { days: "4 DAYS/WEEK", priceUSD: "$32", priceGBP: "£25", duration: "45 Min / Session", lessons: "16 Classes/Month", popular: false },
-    { days: "5 DAYS/WEEK", priceUSD: "$40", priceGBP: "£32", duration: "45 Min / Session", lessons: "20 Classes/Month", popular: false },
+    {
+      days: "2 DAYS/WEEK",
+      priceUSD: "$21",
+      priceGBP: "£17",
+      duration: "45 Min / Session",
+      lessons: "8 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "3 DAYS/WEEK",
+      priceUSD: "$25",
+      priceGBP: "£19",
+      duration: "45 Min / Session",
+      lessons: "12 Classes/Month",
+      popular: true,
+    },
+    {
+      days: "4 DAYS/WEEK",
+      priceUSD: "$32",
+      priceGBP: "£25",
+      duration: "45 Min / Session",
+      lessons: "16 Classes/Month",
+      popular: false,
+    },
+    {
+      days: "5 DAYS/WEEK",
+      priceUSD: "$40",
+      priceGBP: "£32",
+      duration: "45 Min / Session",
+      lessons: "20 Classes/Month",
+      popular: false,
+    },
   ],
 };
 
-// ─────────────────────────────────────────────
-//  Courses (unchanged from original)
-// ─────────────────────────────────────────────
+//  Courses
 const courses = [
   {
     title: "Quran & Arabic",
@@ -156,9 +370,7 @@ const courses = [
   },
 ];
 
-// ─────────────────────────────────────────────
 //  Pricing Card
-// ─────────────────────────────────────────────
 const PricingCard = ({ item, animDelay }) => (
   <div
     className="animate-fade-in-up relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
@@ -194,11 +406,15 @@ const PricingCard = ({ item, animDelay }) => (
       <div className="flex-1 space-y-3">
         <div className="flex items-center gap-3 bg-blue-50 px-4 py-2.5 rounded-xl">
           <Clock className="w-4 h-4 text-blue-500 shrink-0" />
-          <span className="text-sm text-gray-700 font-medium">{item.duration}</span>
+          <span className="text-sm text-gray-700 font-medium">
+            {item.duration}
+          </span>
         </div>
         <div className="flex items-center gap-3 bg-purple-50 px-4 py-2.5 rounded-xl">
           <BookOpen className="w-4 h-4 text-purple-500 shrink-0" />
-          <span className="text-sm text-gray-700 font-medium">{item.lessons}</span>
+          <span className="text-sm text-gray-700 font-medium">
+            {item.lessons}
+          </span>
         </div>
       </div>
 
@@ -230,7 +446,9 @@ const CourseCard = ({ item, animDelay }) => {
         <span className="text-xs font-semibold text-blue-500 uppercase tracking-widest mb-2">
           {item.subtitle}
         </span>
-        <h4 className="text-2xl font-extrabold text-gray-900 mb-4">{item.title}</h4>
+        <h4 className="text-2xl font-extrabold text-gray-900 mb-4">
+          {item.title}
+        </h4>
         <ul className="space-y-2 flex-1">
           {item.features.map((f, i) => (
             <li key={i} className="flex items-start gap-2">
@@ -378,16 +596,22 @@ const Fees = () => {
 
           {/* Banners */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-3xl mx-auto">
-            <div className="flex-1 bg-gradient-to-r from-blue-600 to-purple-700 text-white px-6 py-4 rounded-2xl shadow-xl flex items-center justify-center gap-2">
+            <div
+              onClick={() => (window.location.href = "#contact")}
+              className="flex-1 bg-gradient-to-r from-blue-600 to-purple-700 text-white px-6 py-4 rounded-2xl shadow-xl flex items-center justify-center gap-2 h-25 text-xl"
+            >
               <Sparkles className="w-5 h-5 animate-pulse shrink-0" />
               <p className="font-bold text-sm md:text-base">
-                Available 24/7 · First week FREE trial!
+                First 3 days FREE trial!
               </p>
               <Sparkles className="w-5 h-5 animate-pulse shrink-0" />
             </div>
-            <div className="flex-1 bg-white border-2 border-blue-500 px-6 py-4 rounded-2xl shadow-lg text-center">
+            <div
+              onClick={() => (window.location.href = "#courses")}
+              className="flex-1 bg-white border-2 border-blue-500 px-6 py-4 rounded-2xl shadow-lg text-center"
+            >
               <p className="text-xl md:text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Starting at just $21 / £17/mo
+                Starting at just $37 / £29/mo
               </p>
             </div>
           </div>
