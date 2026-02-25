@@ -17,7 +17,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Fee And Pricing", href: "#Fees" },
+    { name: "Fee And Pricing", href: "#fees" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
