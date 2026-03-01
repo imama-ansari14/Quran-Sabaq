@@ -722,7 +722,7 @@ const PricingSection = ({ title, durationTabs, weekdaysData, weekendData }) => {
   );
 };
 
-// ─── MAIN FILTER TABS ─────────────────────────────────────────────────────────
+// ─── MAIN FILTER TABS ───
 
 const MAIN_FILTERS = [
   "Monthly Packages for Online Quran Courses",
@@ -730,7 +730,7 @@ const MAIN_FILTERS = [
   "Courses",
 ];
 
-// ─── FEES COMPONENT ───────────────────────────────────────────────────────────
+// ─── FEES COMPONENT ─────
 
 const Fees = () => {
   const [activeFilter, setActiveFilter] = useState(MAIN_FILTERS[0]);
