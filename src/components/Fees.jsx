@@ -33,8 +33,8 @@ const quranWeekdays = {
   "30 Minutes": [
     {
       days: "2 DAYS/WEEK",
-      priceUSD: "$37",
-      priceGBP: "£29",
+      priceUSD: "$35",
+      priceGBP: "£30",
       duration: "30 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -42,7 +42,7 @@ const quranWeekdays = {
     {
       days: "3 DAYS/WEEK",
       priceUSD: "$50",
-      priceGBP: "£38",
+      priceGBP: "£42",
       duration: "30 Min / Session",
       lessons: "12 Classes/Month",
       popular: true,
@@ -50,7 +50,7 @@ const quranWeekdays = {
     {
       days: "4 DAYS/WEEK",
       priceUSD: "$65",
-      priceGBP: "£50",
+      priceGBP: "£55",
       duration: "30 Min / Session",
       lessons: "16 Classes/Month",
       popular: false,
@@ -58,7 +58,7 @@ const quranWeekdays = {
     {
       days: "5 DAYS/WEEK",
       priceUSD: "$78",
-      priceGBP: "£58",
+      priceGBP: "£66",
       duration: "30 Min / Session",
       lessons: "20 Classes/Month",
       popular: false,
@@ -68,7 +68,7 @@ const quranWeekdays = {
     {
       days: "2 DAYS/WEEK",
       priceUSD: "$55",
-      priceGBP: "£45",
+      priceGBP: "£47",
       duration: "45 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -76,7 +76,7 @@ const quranWeekdays = {
     {
       days: "3 DAYS/WEEK",
       priceUSD: "$75",
-      priceGBP: "£58",
+      priceGBP: "£63",
       duration: "45 Min / Session",
       lessons: "12 Classes/Month",
       popular: true,
@@ -84,7 +84,7 @@ const quranWeekdays = {
     {
       days: "4 DAYS/WEEK",
       priceUSD: "$95",
-      priceGBP: "£75",
+      priceGBP: "£80",
       duration: "45 Min / Session",
       lessons: "16 Classes/Month",
       popular: false,
@@ -92,7 +92,7 @@ const quranWeekdays = {
     {
       days: "5 DAYS/WEEK",
       priceUSD: "$120",
-      priceGBP: "£85",
+      priceGBP: "£102",
       duration: "45 Min / Session",
       lessons: "20 Classes/Month",
       popular: false,
@@ -102,7 +102,7 @@ const quranWeekdays = {
     {
       days: "2 DAYS/WEEK",
       priceUSD: "$70",
-      priceGBP: "£55",
+      priceGBP: "£59",
       duration: "60 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -110,7 +110,7 @@ const quranWeekdays = {
     {
       days: "3 DAYS/WEEK",
       priceUSD: "$95",
-      priceGBP: "£72",
+      priceGBP: "£80",
       duration: "60 Min / Session",
       lessons: "12 Classes/Month",
       popular: true,
@@ -118,7 +118,7 @@ const quranWeekdays = {
     {
       days: "4 DAYS/WEEK",
       priceUSD: "$120",
-      priceGBP: "£92",
+      priceGBP: "£102",
       duration: "60 Min / Session",
       lessons: "16 Classes/Month",
       popular: false,
@@ -126,7 +126,7 @@ const quranWeekdays = {
     {
       days: "5 DAYS/WEEK",
       priceUSD: "$145",
-      priceGBP: "£110",
+      priceGBP: "£123",
       duration: "60 Min / Session",
       lessons: "20 Classes/Month",
       popular: false,
@@ -136,7 +136,7 @@ const quranWeekdays = {
     {
       days: "2 DAYS/WEEK",
       priceUSD: "$21",
-      priceGBP: "£17",
+      priceGBP: "£18",
       duration: "45 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -144,7 +144,7 @@ const quranWeekdays = {
     {
       days: "3 DAYS/WEEK",
       priceUSD: "$25",
-      priceGBP: "£19",
+      priceGBP: "£21",
       duration: "45 Min / Session",
       lessons: "12 Classes/Month",
       popular: true,
@@ -152,7 +152,7 @@ const quranWeekdays = {
     {
       days: "4 DAYS/WEEK",
       priceUSD: "$35",
-      priceGBP: "£27",
+      priceGBP: "£30",
       duration: "45 Min / Session",
       lessons: "16 Classes/Month",
       popular: false,
@@ -160,7 +160,7 @@ const quranWeekdays = {
     {
       days: "5 DAYS/WEEK",
       priceUSD: "$45",
-      priceGBP: "£35",
+      priceGBP: "£38",
       duration: "45 Min / Session",
       lessons: "20 Classes/Month",
       popular: false,
@@ -174,7 +174,7 @@ const quranWeekend = {
     {
       days: "SAT & SUN",
       priceUSD: "$42",
-      priceGBP: "£33",
+      priceGBP: "£36",
       duration: "30 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -182,7 +182,7 @@ const quranWeekend = {
     {
       days: "SAT OR SUN",
       priceUSD: "$28",
-      priceGBP: "£22",
+      priceGBP: "£24",
       duration: "30 Min / Session",
       lessons: "4 Classes/Month",
       popular: true,
@@ -192,7 +192,7 @@ const quranWeekend = {
     {
       days: "SAT & SUN",
       priceUSD: "$62",
-      priceGBP: "£50",
+      priceGBP: "£52",
       duration: "45 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -200,7 +200,7 @@ const quranWeekend = {
     {
       days: "SAT OR SUN",
       priceUSD: "$40",
-      priceGBP: "£32",
+      priceGBP: "£34",
       duration: "45 Min / Session",
       lessons: "4 Classes/Month",
       popular: true,
@@ -210,15 +210,15 @@ const quranWeekend = {
     {
       days: "SAT & SUN",
       priceUSD: "$78",
-      priceGBP: "£62",
+      priceGBP: "£66",
       duration: "60 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
     },
     {
-      days: "SAT OR SUN",
+      days: "SAT OR SUN (Any one day)",
       priceUSD: "$50",
-      priceGBP: "£40",
+      priceGBP: "£42",
       duration: "60 Min / Session",
       lessons: "4 Classes/Month",
       popular: true,
@@ -228,15 +228,15 @@ const quranWeekend = {
     {
       days: "SAT & SUN",
       priceUSD: "$25",
-      priceGBP: "£20",
+      priceGBP: "£21",
       duration: "45 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
     },
     {
-      days: "SAT OR SUN",
+      days: "SAT OR SUN ",
       priceUSD: "$15",
-      priceGBP: "£12",
+      priceGBP: "£13",
       duration: "45 Min / Session",
       lessons: "4 Classes/Month",
       popular: true,
@@ -250,7 +250,7 @@ const tafseerWeekdays = {
     {
       days: "2 DAYS/WEEK",
       priceUSD: "$45",
-      priceGBP: "£40",
+      priceGBP: "£38",
       duration: "30 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -258,7 +258,7 @@ const tafseerWeekdays = {
     {
       days: "3 DAYS/WEEK",
       priceUSD: "$58",
-      priceGBP: "£50",
+      priceGBP: "£49",
       duration: "30 Min / Session",
       lessons: "12 Classes/Month",
       popular: true,
@@ -266,7 +266,7 @@ const tafseerWeekdays = {
     {
       days: "4 DAYS/WEEK",
       priceUSD: "$75",
-      priceGBP: "£65",
+      priceGBP: "£63",
       duration: "30 Min / Session",
       lessons: "16 Classes/Month",
       popular: false,
@@ -274,7 +274,7 @@ const tafseerWeekdays = {
     {
       days: "5 DAYS/WEEK",
       priceUSD: "$85",
-      priceGBP: "£75",
+      priceGBP: "£72",
       duration: "30 Min / Session",
       lessons: "20 Classes/Month",
       popular: false,
@@ -300,7 +300,7 @@ const tafseerWeekdays = {
     {
       days: "4 DAYS/WEEK",
       priceUSD: "$40",
-      priceGBP: "£35",
+      priceGBP: "£34",
       duration: "45 Min / Session",
       lessons: "12 Hours/Month",
       popular: false,
@@ -308,7 +308,7 @@ const tafseerWeekdays = {
     {
       days: "5 DAYS/WEEK",
       priceUSD: "$45",
-      priceGBP: "£40",
+      priceGBP: "£38",
       duration: "45 Min / Session",
       lessons: "15 Hours/Month",
       popular: false,
@@ -318,7 +318,7 @@ const tafseerWeekdays = {
     {
       days: "2 DAYS/WEEK",
       priceUSD: "$85",
-      priceGBP: "£75",
+      priceGBP: "£72",
       duration: "60 Min / Session",
       lessons: "8 Hours/Month",
       popular: false,
@@ -326,7 +326,7 @@ const tafseerWeekdays = {
     {
       days: "3 DAYS/WEEK",
       priceUSD: "$112",
-      priceGBP: "£100",
+      priceGBP: "£95",
       duration: "60 Min / Session",
       lessons: "12 Hours/Month",
       popular: true,
@@ -334,7 +334,7 @@ const tafseerWeekdays = {
     {
       days: "4 DAYS/WEEK",
       priceUSD: "$145",
-      priceGBP: "£125",
+      priceGBP: "£123",
       duration: "60 Min / Session",
       lessons: "16 Hours/Month",
       popular: false,
@@ -342,7 +342,7 @@ const tafseerWeekdays = {
     {
       days: "5 DAYS/WEEK",
       priceUSD: "$165",
-      priceGBP: "£145",
+      priceGBP: "£140",
       duration: "60 Min / Session",
       lessons: "20 Hours/Month",
       popular: false,
@@ -352,7 +352,7 @@ const tafseerWeekdays = {
     {
       days: "2 DAYS/WEEK",
       priceUSD: "$21",
-      priceGBP: "£17",
+      priceGBP: "£18",
       duration: "45 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -360,7 +360,7 @@ const tafseerWeekdays = {
     {
       days: "3 DAYS/WEEK",
       priceUSD: "$25",
-      priceGBP: "£19",
+      priceGBP: "£21",
       duration: "45 Min / Session",
       lessons: "12 Classes/Month",
       popular: true,
@@ -368,7 +368,7 @@ const tafseerWeekdays = {
     {
       days: "4 DAYS/WEEK",
       priceUSD: "$32",
-      priceGBP: "£25",
+      priceGBP: "£27",
       duration: "45 Min / Session",
       lessons: "16 Classes/Month",
       popular: false,
@@ -376,7 +376,7 @@ const tafseerWeekdays = {
     {
       days: "5 DAYS/WEEK",
       priceUSD: "$40",
-      priceGBP: "£32",
+      priceGBP: "£34",
       duration: "45 Min / Session",
       lessons: "20 Classes/Month",
       popular: false,
@@ -390,7 +390,7 @@ const tafseerWeekend = {
     {
       days: "SAT & SUN",
       priceUSD: "$50",
-      priceGBP: "£45",
+      priceGBP: "£42",
       duration: "30 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -398,7 +398,7 @@ const tafseerWeekend = {
     {
       days: "SAT OR SUN",
       priceUSD: "$32",
-      priceGBP: "£28",
+      priceGBP: "£27",
       duration: "30 Min / Session",
       lessons: "4 Classes/Month",
       popular: true,
@@ -426,15 +426,15 @@ const tafseerWeekend = {
     {
       days: "SAT & SUN",
       priceUSD: "$95",
-      priceGBP: "£85",
+      priceGBP: "£80",
       duration: "60 Min / Session",
       lessons: "8 Hours/Month",
       popular: false,
     },
     {
-      days: "SAT OR SUN",
+      days: "SAT OR SUN)",
       priceUSD: "$60",
-      priceGBP: "£52",
+      priceGBP: "£51",
       duration: "60 Min / Session",
       lessons: "4 Hours/Month",
       popular: true,
@@ -444,7 +444,7 @@ const tafseerWeekend = {
     {
       days: "SAT & SUN",
       priceUSD: "$28",
-      priceGBP: "£22",
+      priceGBP: "£24",
       duration: "45 Min / Session",
       lessons: "8 Classes/Month",
       popular: false,
@@ -452,7 +452,7 @@ const tafseerWeekend = {
     {
       days: "SAT OR SUN",
       priceUSD: "$18",
-      priceGBP: "£14",
+      priceGBP: "£15",
       duration: "45 Min / Session",
       lessons: "4 Classes/Month",
       popular: true,
@@ -534,7 +534,7 @@ const PricingCard = ({ item, animDelay }) => (
     style={{ animationDelay: `${animDelay}ms`, animationFillMode: "both" }}
   >
     {item.popular && (
-      <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow">
+      <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xm font-bold px-3 py-2 rounded-full z-10 shadow">
         Most Popular
       </div>
     )}
