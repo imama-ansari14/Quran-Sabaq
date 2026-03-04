@@ -68,9 +68,35 @@ const Contact = ({ enrollCourse }) => {
     };
   }, []);
 
-  const handleSubmit = (e) => {
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://formspree.io/f/maqpqyqn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          course: "",
+          message: "",
+        });
+      }
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
+    }
+    setSubmitting(false);
   };
 
   const handleChange = (e) => {
@@ -298,7 +324,9 @@ const Contact = ({ enrollCourse }) => {
                     <option value="Quran Translation">Quran Translation</option>
                     <option value="Tajweed & Tarteel">Tajweed & Tarteel</option>
                     <option value="Prayers & Duas">Prayers & Duas</option>
-                     <option value="Tafseer Quran & Advance Arabic">Tafseer Quran & Advance Arabic</option>
+                    <option value="Tafseer Quran & Advance Arabic">
+                      Tafseer Quran & Advance Arabic
+                    </option>
                     <option value="Online Quran Course">
                       Online Quran Course (Pricing Plan)
                     </option>
@@ -331,6 +359,7 @@ const Contact = ({ enrollCourse }) => {
                   <span>Send Message</span>
                   <Send className="w-5 h-5" />
                 </button>
+                
               </form>
             </div>
           </div>
