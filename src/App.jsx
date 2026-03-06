@@ -10,15 +10,16 @@ import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
+    const [enrollCourse, setEnrollCourse] = useState(null);
 
   return (
     <>
       <Navbar />
       <Hero />
       <About />
-      <Fee />
+      <Fee  onEnroll={setEnrollCourse} />
       <Testimonials />
-      <Contact />
+      <Contact  enrollCourse={enrollCourse} />
       <Footer />
     </>
   );

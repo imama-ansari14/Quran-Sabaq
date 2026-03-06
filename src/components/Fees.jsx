@@ -216,7 +216,7 @@ const quranWeekend = {
       popular: false,
     },
     {
-      days: "SAT OR SUN (Any one day)",
+      days: "SAT OR SUN",
       priceUSD: "$50",
       priceGBP: "£42",
       duration: "60 Min / Session",
@@ -526,9 +526,9 @@ const courses = [
   },
 ];
 
-// ─── SUB-COMPONENTS ───────────────────────────────────────────────────────────
+// ─── PRICING CARD ─────────────────────────────────────────────────────────────
 
-const PricingCard = ({ item, animDelay }) => (
+const PricingCard = ({ item, animDelay, onEnroll, sectionName }) => (
   <div
     className="animate-fade-in-up relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
     style={{ animationDelay: `${animDelay}ms`, animationFillMode: "both" }}
@@ -568,17 +568,33 @@ const PricingCard = ({ item, animDelay }) => (
           </span>
         </div>
       </div>
-      <a href="#contact" className="mt-6 w-full">
-        <button className="w-full bg-gradient-to-r from-blue-600 to-purple-700 text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group">
-          Choose Plan
-          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </button>
-      </a>
+      <button
+        onClick={() => {
+          onEnroll?.({
+            courseName: sectionName?.includes("Tafseer")
+              ? "Tafseer Quran & Advance Arabic"
+              : "Online Quran Course",
+            schedule: item.days,
+            duration: item.duration,
+            price: `${item.priceUSD} / ${item.priceGBP} per month`,
+            lessons: item.lessons,
+          });
+          document
+            .getElementById("contact")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-700 text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group"
+      >
+        Choose Plan
+        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+      </button>
     </div>
   </div>
 );
 
-const CourseCard = ({ item, animDelay }) => {
+// ─── COURSE CARD ──────────────────────────────────────────────────────────────
+
+const CourseCard = ({ item, animDelay, onEnroll }) => {
   const Icon = item.icon;
   return (
     <div
@@ -606,20 +622,38 @@ const CourseCard = ({ item, animDelay }) => {
             </li>
           ))}
         </ul>
-        <a href="#contact" className="mt-6 w-full">
-          <button className="w-full bg-gradient-to-r from-blue-600 to-purple-700 text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group">
-            Enroll Now
-            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </a>
+        <button
+          onClick={() => {
+            onEnroll?.({
+              courseName: item.title,
+              schedule: item.subtitle,
+              duration: "To be discussed",
+              price: "Contact for pricing",
+              lessons: `${item.features.length} topics covered`,
+            });
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-700 text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group"
+        >
+          Enroll Now
+          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </button>
       </div>
     </div>
   );
 };
 
-// ─── PRICING SECTION (with Weekdays / Weekend + Duration filters) ─────────────
+// ─── PRICING SECTION ─────────────────────────────────────────────────────────
 
-const PricingSection = ({ title, durationTabs, weekdaysData, weekendData }) => {
+const PricingSection = ({
+  title,
+  durationTabs,
+  weekdaysData,
+  weekendData,
+  onEnroll,
+}) => {
   const [scheduleFilter, setScheduleFilter] = useState("Weekdays");
   const [activeDuration, setActiveDuration] = useState(durationTabs[0]);
   const [animKey, setAnimKey] = useState(0);
@@ -640,13 +674,12 @@ const PricingSection = ({ title, durationTabs, weekdaysData, weekendData }) => {
 
   return (
     <div className="mb-20">
-      {/* Section title */}
       <div className="text-center mb-8">
         <h3 className="text-2xl md:text-3xl font-extrabold text-gray-800 mb-6">
           {title}
         </h3>
 
-        {/* Row 1: Weekdays / Weekend toggle */}
+        {/* Weekdays / Weekend toggle */}
         <div className="flex justify-center mb-4">
           <div className="inline-flex bg-white border border-gray-200 rounded-2xl p-1.5 shadow-sm gap-1">
             {["Weekdays", "Weekend"].map((s) => (
@@ -666,7 +699,7 @@ const PricingSection = ({ title, durationTabs, weekdaysData, weekendData }) => {
           </div>
         </div>
 
-        {/* Row 2: Duration tabs */}
+        {/* Duration tabs */}
         <div className="inline-flex flex-wrap justify-center gap-2 bg-white border border-gray-200 rounded-2xl p-2 shadow-sm">
           {durationTabs.map((t) => (
             <button
@@ -700,7 +733,7 @@ const PricingSection = ({ title, durationTabs, weekdaysData, weekendData }) => {
         </span>
       </div>
 
-      {/* Cards */}
+      {/* Cards — sectionName passed so PricingCard knows which section it belongs to */}
       <div
         key={animKey}
         className={`grid gap-6 ${
@@ -713,16 +746,19 @@ const PricingSection = ({ title, durationTabs, weekdaysData, weekendData }) => {
         {plans.map((item, i) => (
           <div key={i} className="flex">
             <div className="w-full">
-              <PricingCard item={item} animDelay={i * 60} />
+              <PricingCard
+                item={item}
+                animDelay={i * 60}
+                onEnroll={onEnroll}
+                sectionName={title}
+              />
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-// ─── MAIN FILTER TABS ───
+}; // ─── MAIN FILTER TABS ───
 
 const MAIN_FILTERS = [
   "Monthly Packages for Online Quran Courses",
@@ -730,9 +766,10 @@ const MAIN_FILTERS = [
   "Courses",
 ];
 
-// ─── FEES COMPONENT ─────
+// / ─── FEES COMPONENT ──────────────────────────────────────────────────────────
+// ✅ FIX: Accept onEnroll prop from App.jsx
 
-const Fees = () => {
+const Fees = ({ onEnroll }) => {
   const [activeFilter, setActiveFilter] = useState(MAIN_FILTERS[0]);
   const [isVisible, setIsVisible] = useState(false);
   const [animKey, setAnimKey] = useState(0);
@@ -844,6 +881,7 @@ const Fees = () => {
               durationTabs={DURATION_TABS}
               weekdaysData={quranWeekdays}
               weekendData={quranWeekend}
+              onEnroll={onEnroll}
             />
           )}
 
@@ -854,6 +892,7 @@ const Fees = () => {
               durationTabs={TAFSEER_DURATION_TABS}
               weekdaysData={tafseerWeekdays}
               weekendData={tafseerWeekend}
+              onEnroll={onEnroll}
             />
           )}
 
@@ -865,7 +904,11 @@ const Fees = () => {
               {courses.map((item, i) => (
                 <div key={i} className="flex">
                   <div className="w-full">
-                    <CourseCard item={item} animDelay={i * 60} />
+                    <CourseCard
+                      item={item}
+                      animDelay={i * 60}
+                      onEnroll={onEnroll}
+                    />
                   </div>
                 </div>
               ))}

@@ -13,9 +13,11 @@ import {
   GraduationCap,
   Gift,
   Laptop,
+  Sparkles,
 } from "lucide-react";
 
-const Contact = () => {
+// ✅ CHANGED: Accept `enrollCourse` prop
+const Contact = ({ enrollCourse }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
   const [formData, setFormData] = useState({
@@ -26,6 +28,24 @@ const Contact = () => {
     message: "",
   });
   const sectionRef = useRef(null);
+
+  // ✅ NEW: When enrollCourse changes, auto-fill the relevant form fields
+  useEffect(() => {
+    if (enrollCourse) {
+      setFormData((prev) => ({
+        ...prev,
+        course: enrollCourse.courseName || "",
+        message: [
+          enrollCourse.schedule ? `Schedule: ${enrollCourse.schedule}` : "",
+          enrollCourse.duration ? `Duration: ${enrollCourse.duration}` : "",
+          enrollCourse.price ? `Price: ${enrollCourse.price}` : "",
+          enrollCourse.lessons ? `Classes: ${enrollCourse.lessons}` : "",
+        ]
+          .filter(Boolean)
+          .join("\n"),
+      }));
+    }
+  }, [enrollCourse]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -187,9 +207,27 @@ const Contact = () => {
             }`}
           >
             <div className="bg-gray-50 rounded-3xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 Send us a Message
               </h3>
+
+              {/* ✅ NEW: Show auto-fill banner when a course is selected */}
+              {enrollCourse && (
+                <div className="mb-6 flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-2xl px-4 py-3">
+                  <Sparkles className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-bold text-blue-700">
+                      Course details auto-filled!
+                    </p>
+                    <p className="text-xs text-blue-500 mt-0.5">
+                      Enquiring about:{" "}
+                      <strong>{enrollCourse.courseName}</strong> —{" "}
+                      {enrollCourse.schedule}
+                    </p>
+                  </div>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -236,6 +274,7 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* ✅ CHANGED: Course field is now a text input that gets auto-filled */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Select Course
@@ -244,18 +283,29 @@ const Contact = () => {
                     name="course"
                     value={formData.course}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 outline-none transition-all duration-300"
+                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all duration-300 ${
+                      enrollCourse
+                        ? "border-blue-300 bg-blue-50 text-blue-800 font-medium focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                        : "border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                    }`}
                   >
                     <option value="">Choose a course</option>
-                    <option value="nazra">Quran Reading (Nazra)</option>
-                    <option value="hifz">Quran Memorization (Hifz)</option>
-                    <option value="tajweed">Tajweed Mastery</option>
-                    <option value="tafseer">Tafseer & Translation</option>
-                    <option value="islamic">Islamic Studies</option>
-                    <option value="kids">Kids Quran Program</option>
+                    <option value="Quran & Arabic">Quran & Arabic</option>
+                    <option value="Arabic Course">Arabic Course</option>
+                    <option value="Quran Memorization">
+                      Quran Memorization
+                    </option>
+                    <option value="Quran Translation">Quran Translation</option>
+                    <option value="Tajweed & Tarteel">Tajweed & Tarteel</option>
+                    <option value="Prayers & Duas">Prayers & Duas</option>
+                     <option value="Tafseer Quran & Advance Arabic">Tafseer Quran & Advance Arabic</option>
+                    <option value="Online Quran Course">
+                      Online Quran Course (Pricing Plan)
+                    </option>
                   </select>
                 </div>
 
+                {/* ✅ CHANGED: Message textarea is auto-filled with plan details */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Message
@@ -265,7 +315,11 @@ const Contact = () => {
                     rows="4"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 outline-none transition-all duration-300 resize-none"
+                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all duration-300 resize-none ${
+                      enrollCourse
+                        ? "border-blue-300 bg-blue-50 text-blue-800 font-medium focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                        : "border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                    }`}
                     placeholder="Tell us about your goals and questions..."
                   ></textarea>
                 </div>
@@ -355,9 +409,7 @@ const Contact = () => {
                             ? "max-h-96 opacity-100"
                             : "max-h-0 opacity-0"
                         }`}
-                        style={{
-                          overflow: "hidden",
-                        }}
+                        style={{ overflow: "hidden" }}
                       >
                         <div className="px-6 py-5 bg-gray-50 border-t border-gray-200">
                           <p className="text-gray-700 leading-relaxed">
