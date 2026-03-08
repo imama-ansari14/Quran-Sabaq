@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Swal from "sweetalert2";
 import {
   Mail,
   Phone,
@@ -84,13 +85,46 @@ const Contact = ({ enrollCourse }) => {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        setSubmitted(true);
         setFormData({
           name: "",
           email: "",
           phone: "",
           course: "",
           message: "",
+        });
+        Swal.fire({
+          title: "Message Sent!",
+          text: "JazakAllah! We'll contact you soon. 🤲",
+          iconHtml: `
+    <div style="
+      width:70px; height:70px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+      border:2px solid rgba(255,255,255,0.4);
+      display:flex; align-items:center;
+      justify-content:center; margin:0 auto;
+      box-shadow:0 8px 32px rgba(0,0,0,0.15);
+    ">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"
+        fill="none" stroke="white" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6 9 17l-5-5"/>
+      </svg>
+    </div>`,
+         background: "linear-gradient(135deg, #2563eb 0%, #7e22ce 100%)",
+          color: "#ffffff",
+          confirmButtonText: "Great!",
+          showClass: {
+            popup: "swal-show-anim",
+          },
+          customClass: {
+            popup: "swal-custom-popup",
+            title: "swal-custom-title",
+            htmlContainer: "swal-custom-text",
+            confirmButton: "swal-custom-btn",
+            icon: "swal-custom-icon",
+          },
         });
       }
     } catch (err) {
@@ -351,15 +385,14 @@ const Contact = ({ enrollCourse }) => {
                     placeholder="Tell us about your goals and questions..."
                   ></textarea>
                 </div>
-
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                  disabled={submitting}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-60"
                 >
-                  <span>Send Message</span>
+                  <span>{submitting ? "Sending..." : "Send Message"}</span>
                   <Send className="w-5 h-5" />
                 </button>
-                
               </form>
             </div>
           </div>
