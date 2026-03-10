@@ -112,7 +112,7 @@ const Contact = ({ enrollCourse }) => {
         <path d="M20 6 9 17l-5-5"/>
       </svg>
     </div>`,
-         background: "linear-gradient(135deg, #2563eb 0%, #7e22ce 100%)",
+          background: "linear-gradient(135deg, #2563eb 0%, #7e22ce 100%)",
           color: "#ffffff",
           confirmButtonText: "Great!",
           showClass: {
