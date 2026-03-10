@@ -580,7 +580,7 @@ const PricingCard = ({ item, animDelay, onEnroll, sectionName }) => (
             lessons: item.lessons,
           });
           document
-            .getElementById("contact")
+            .getElementById("contact-form")
             ?.scrollIntoView({ behavior: "smooth" });
         }}
         className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-700 text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group"
@@ -632,7 +632,7 @@ const CourseCard = ({ item, animDelay, onEnroll }) => {
               lessons: `${item.features.length} topics covered`,
             });
             document
-              .getElementById("contact")
+              .getElementById("contact-form")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
           className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-700 text-white py-3 rounded-xl font-bold hover:opacity-90 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group"

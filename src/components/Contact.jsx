@@ -266,7 +266,10 @@ const Contact = ({ enrollCourse }) => {
                 : "-translate-x-10 opacity-0"
             }`}
           >
-            <div className="bg-gray-50 rounded-3xl p-8 shadow-xl">
+            <div
+              id="contact-form"
+              className="bg-gray-50 rounded-3xl p-8 shadow-xl"
+            >
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 Send us a Message
               </h3>
