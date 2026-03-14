@@ -7,6 +7,7 @@ import Fee from "./components/Fees";
 import Testimonials from "./components/Testimonals";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import FixedButtons from "./components/FixedButtons";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
       <Testimonials />
       <Contact  enrollCourse={enrollCourse} />
       <Footer />
+      <FixedButtons />
     </>
   );
 }

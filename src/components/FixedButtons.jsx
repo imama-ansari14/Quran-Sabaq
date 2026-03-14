@@ -8,7 +8,7 @@ const FixedButtons = () => {
         href="https://wa.me/923002207349"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-24 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-green-600 transform transition-all duration-300 z-40"
+        className="fixed bottom-25 right-8 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-green-600 transform transition-all duration-300 z-40"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="w-6 h-6 text-white" />
