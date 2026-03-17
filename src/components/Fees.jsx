@@ -526,7 +526,7 @@ const courses = [
   },
 ];
 
-// ─── PRICING CARD ─────────────────────────────────────────────────────────────
+// ─── PRICING CARD 
 
 const PricingCard = ({ item, animDelay, onEnroll, sectionName }) => (
   <div
@@ -592,7 +592,7 @@ const PricingCard = ({ item, animDelay, onEnroll, sectionName }) => (
   </div>
 );
 
-// ─── COURSE CARD ──────────────────────────────────────────────────────────────
+// ─── COURSE CARD 
 
 const CourseCard = ({ item, animDelay, onEnroll }) => {
   const Icon = item.icon;
