@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Fee from "./components/Fees";
+import Discount from "./components/Discount";
 import Testimonials from "./components/Testimonals";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -19,6 +20,7 @@ function App() {
       <Hero />
       <About />
       <Fee  onEnroll={setEnrollCourse} />
+      <Discount />
       <Testimonials />
       <Contact  enrollCourse={enrollCourse} />
       <Footer />

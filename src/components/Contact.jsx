@@ -200,7 +200,7 @@ const Contact = ({ enrollCourse }) => {
     },
   ];
 
-  // ── Render 
+  // ── Render
   return (
     <section
       id="contact"
