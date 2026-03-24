@@ -12,17 +12,17 @@ import FixedButtons from "./components/FixedButtons";
 
 function App() {
   const [count, setCount] = useState(0);
-    const [enrollCourse, setEnrollCourse] = useState(null);
+  const [enrollCourse, setEnrollCourse] = useState(null);
 
   return (
     <>
       <Navbar />
       <Hero />
       <About />
-      <Fee  onEnroll={setEnrollCourse} />
+      <Fee onEnroll={setEnrollCourse} />
       <Discount />
       <Testimonials />
-      <Contact  enrollCourse={enrollCourse} />
+      <Contact enrollCourse={enrollCourse} />
       <Footer />
       <FixedButtons />
     </>

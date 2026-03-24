@@ -132,6 +132,7 @@ const quranWeekdays = {
       popular: false,
     },
   ],
+
   "Group Class (3 to 5 students)": [
     {
       days: "2 DAYS/WEEK",
@@ -244,7 +245,7 @@ const quranWeekend = {
   ],
 };
 
-// Tafseer Pricing — Weekdays
+// TAFSEER PRICING — Weekdays
 const tafseerWeekdays = {
   "30 Minutes": [
     {
@@ -460,7 +461,7 @@ const tafseerWeekend = {
   ],
 };
 
-// Courses
+// COURSES
 const courses = [
   {
     title: "Quran & Arabic",
@@ -526,7 +527,7 @@ const courses = [
   },
 ];
 
-// ─── PRICING CARD 
+// ─── PRICING CARD
 
 const PricingCard = ({ item, animDelay, onEnroll, sectionName }) => (
   <div
@@ -592,7 +593,7 @@ const PricingCard = ({ item, animDelay, onEnroll, sectionName }) => (
   </div>
 );
 
-// ─── COURSE CARD 
+// ─── COURSE CARD
 
 const CourseCard = ({ item, animDelay, onEnroll }) => {
   const Icon = item.icon;
