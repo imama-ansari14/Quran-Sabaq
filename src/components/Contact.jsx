@@ -144,12 +144,12 @@ const Contact = ({ enrollCourse }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ── Static data ───────────────────────────────────────────────────────────
+  // ── Static data
   const contactInfo = [
     {
       icon: Phone,
       title: "Call Us",
-      detail: "03002207349",
+      detail: "+92 300 2207349",
       subdetail: "whatsapp available",
       gradient: "from-blue-600 to-purple-500",
     },
